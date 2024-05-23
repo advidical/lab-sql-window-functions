@@ -19,7 +19,8 @@ SELECT title, length, rating,
 	   RANK() OVER(PARTITION BY rating ORDER BY length DESC) as Rank_num
 FROM film
 WHERE length IS NOT NULL AND length <> 0;
--- Produce a list that shows for each film in the Sakila database, the actor or actress who has acted in the greatest number of films, 
+
+-- 3. Produce a list that shows for each film in the Sakila database, the actor or actress who has acted in the greatest number of films, 
 -- as well as the total number of films in which they have acted. 
 -- Hint: Use temporary tables, CTEs, or Views when appropiate to simplify your queries
 CREATE OR REPLACE VIEW actor_film_counts AS
